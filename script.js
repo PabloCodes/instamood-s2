@@ -66,9 +66,11 @@ app.controller('MainCtrl', function($scope, $http) {
     	}
 
         var weekArray = [$scope.sunday, $scope.monday, $scope.tuesday, $scope.wednesday, $scope.thursday, $scope.friday, $scope.saturday]
-        $scope.maxDay = weekArray[0]
+        $scope.maxDay = 0;
         	for(var j=0; j<weekArray.length; j++) {
-        		$scope.maxDay = days[j]
+        		if (weekArray[j] > $scope.maxDay) {
+        			$scope.maxDay = days[j];
+        		}
         	}   
     	if (pic.user_has_liked === true) {
     		$scope.egoScore = $scope.egoScore + 1;
