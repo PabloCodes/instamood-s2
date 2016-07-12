@@ -1,0 +1,31 @@
+* {
+	text-align: center;
+}
+li {
+	list-style: none;
+	width: 32%;
+	float: left;
+}
+.third-width {
+	display: inline-block;
+}
+img {
+	width: 90%;
+	margin: 10px;
+}
+.right {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 40%;
+	background: blue;
+	color: white;
+	border: solid white 2px;
+	opacity: .30;
+}
+
+@media(max-width: 480px) {
+	li {
+		width: 100%;
+	}
+}
